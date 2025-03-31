@@ -1,7 +1,7 @@
 # multi-lora-medical
 多个lora适配器切换
 
-
+```
 
 test_model_dir = {
     "lora_adaptor_1": "path/to/lora1",
@@ -13,7 +13,8 @@ test_model_dir = {
 
 for domain, path in test_model_dir.items():
     model.load_adapter(path, adapter_name=domain)
-
+```
+```
 model:
 LlamaForCausalLM(
   (model): LlamaModel(
@@ -93,7 +94,9 @@ LlamaForCausalLM(
   )
   (lm_head): Linear(in_features=4096, out_features=128256, bias=False)
 )
-
+```
+```
 for domain, path in test_model_dir.items():
     model.set_adapter(domain)
+```
 
